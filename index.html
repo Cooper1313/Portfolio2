@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Lava Lamp Background -->
-<div class="lava-lamp">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
-    <div class="blob blob-5"></div>
-</div>
+    <!-- Lava Lamp Background -->
+    <div class="lava-lamp">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        <div class="blob blob-5"></div>
+    </div>
     
     <!-- Navigation -->
     <nav class="navbar">
@@ -31,35 +31,38 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span id="typed">Kaiya Cooper</span></h1>
-            <p>Information Systems Student</p>
-            <div class="buttons">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Hi, I'm <span id="typed"></span></h1>
+            <p data-aos="fade-up" data-aos-delay="200">Information Systems Student & Technology Enthusiast</p>
+            <div class="buttons" data-aos="fade-up" data-aos-delay="400">
                 <a href="projects.html" class="btn primary">View Projects</a>
                 <a href="resume.pdf" class="btn secondary">Resume</a>
             </div>
+        </div>
+        <div class="scroll-indicator" data-aos="fade-in" data-aos-delay="800">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- Quick Skills Preview -->
     <section class="skills-preview">
         <div class="container">
-            <h2>What I Do</h2>
+            <h2 data-aos="fade-up">What I Do</h2>
             <div class="skills-grid">
-                <div class="skill-item">
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
                     <i class="fas fa-robot"></i>
                     <h3>AI & Technology</h3>
-                    <p>Artificial Intelligence, Prompt Engineering, IoT Development</p>
+                    <p>Artificial Intelligence, Prompt Engineering, IoT Development, Educational Technology</p>
                 </div>
-                <div class="skill-item">
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
                     <i class="fas fa-code"></i>
                     <h3>Development</h3>
-                    <p>JavaScript, Python, C++, 3D Modeling, Web Design</p>
+                    <p>C++, JavaScript, Python, 3D Modeling, Web Design, Arduino Programming</p>
                 </div>
-                <div class="skill-item">
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
                     <i class="fas fa-lightbulb"></i>
                     <h3>Business Innovation</h3>
-                    <p>Process Improvement, Project Management, Strategic Planning</p>
+                    <p>Process Improvement, Project Management, Strategic Planning, Digital Transformation</p>
                 </div>
             </div>
         </div>
@@ -68,31 +71,26 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Loading...');
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
             
             // Initialize Typed.js
             if (document.getElementById('typed')) {
                 new Typed('#typed', {
-                    strings: ['Kaiya Cooper', 'an Information Systems Student', 'an Innovation Advocate', 'a Tech Enthusiast'],
+                    strings: ['Kaiya Cooper', 'an Information Systems Student', 'an Innovation Advocate', 'a Tech Enthusiast', 'a Creative Developer'],
                     typeSpeed: 50,
                     backSpeed: 30,
                     backDelay: 2000,
-                    loop: true
-                });
-            }
-            
-            // Initialize particles
-            if (document.getElementById('particles-js')) {
-                particlesJS('particles-js', {
-                    particles: {
-                        number: { value: 50 },
-                        color: { value: '#ffffff' },
-                        line_linked: { enable: true, color: '#ffffff', opacity: 0.4 },
-                        move: { enable: true, speed: 2 }
-                    }
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '|'
                 });
             }
         });
