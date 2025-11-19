@@ -22,66 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Particles.js configuration
-if (document.getElementById('particles-js')) {
-    particlesJS('particles-js', {
-        particles: {
-            number: {
-                value: 80,
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            color: {
-                value: '#ffffff'
-            },
-            shape: {
-                type: 'circle'
-            },
-            opacity: {
-                value: 0.5,
-                random: false
-            },
-            size: {
-                value: 3,
-                random: true
-            },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: '#ffffff',
-                opacity: 0.4,
-                width: 1
-            },
-            move: {
-                enable: true,
-                speed: 6,
-                direction: 'none',
-                random: false,
-                straight: false,
-                out_mode: 'out',
-                bounce: false
-            }
-        },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: 'repulse'
-                },
-                onclick: {
-                    enable: true,
-                    mode: 'push'
-                },
-                resize: true
-            }
-        },
-        retina_detect: true
-    });
-}
-
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -128,3 +68,13 @@ function animateSkillBars() {
 
 // Initialize skill bar animations
 document.addEventListener('DOMContentLoaded', animateSkillBars);
+
+// Enhanced lava lamp effect
+document.addEventListener('DOMContentLoaded', function() {
+    const blobs = document.querySelectorAll('.blob');
+    blobs.forEach((blob, index) => {
+        // Add some randomness to the animation
+        blob.style.animationDelay = `-${Math.random() * 5}s`;
+        blob.style.animationDuration = `${6 + Math.random() * 4}s`;
+    });
+});
