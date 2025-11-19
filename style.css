@@ -66,15 +66,88 @@ body {
     width: 100%;
 }
 
-/* Particles Background */
-#particles-js {
+/* LAVA LAMP BACKGROUND - PRIORITY */
+.lava-lamp {
     position: fixed;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    animation: float 6s ease-in-out infinite;
+    backdrop-filter: blur(2px);
+}
+
+.blob-1 {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 8s;
+}
+
+.blob-2 {
+    width: 200px;
+    height: 200px;
+    top: 60%;
+    right: 15%;
+    animation-delay: -2s;
+    animation-duration: 10s;
+}
+
+.blob-3 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: -4s;
+    animation-duration: 7s;
+}
+
+.blob-4 {
+    width: 250px;
+    height: 250px;
+    top: 5%;
+    right: 20%;
+    animation-delay: -1s;
+    animation-duration: 9s;
+}
+
+.blob-5 {
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    right: 40%;
+    animation-delay: -3s;
+    animation-duration: 6s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1);
+        opacity: 0.8;
+    }
+    25% {
+        transform: translateY(-30px) translateX(20px) scale(1.1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-60px) translateX(-20px) scale(0.9);
+        opacity: 0.4;
+    }
+    75% {
+        transform: translateY(-30px) translateX(25px) scale(1.05);
+        opacity: 0.7;
+    }
 }
 
 /* Hero Section */
@@ -139,7 +212,6 @@ body {
     padding: 8px 20px;
     font-size: 0.9rem;
 }
-
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -662,6 +734,16 @@ body {
         width: 160px;
         font-size: 0.6rem;
     }
+    
+    /* Lava lamp mobile adjustments */
+    .blob-1 { width: 200px; height: 200px; }
+    .blob-2
+        /* Lava lamp mobile adjustments */
+    .blob-1 { width: 200px; height: 200px; }
+    .blob-2 { width: 150px; height: 150px; }
+    .blob-3 { width: 100px; height: 100px; }
+    .blob-4 { width: 180px; height: 180px; }
+    .blob-5 { width: 80px; height: 80px; }
 }
 
 @media (max-width: 480px) {
@@ -675,91 +757,18 @@ body {
         flex-direction: column;
         gap: 0.5rem;
     }
-}
-/* Lava Lamp Background */
-.lava-lamp {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    z-index: -1;
-    overflow: hidden;
+    
+    /* Even smaller lava lamp blobs for mobile */
+    .blob-1 { width: 150px; height: 150px; }
+    .blob-2 { width: 120px; height: 120px; }
+    .blob-3 { width: 80px; height: 80px; }
+    .blob-4 { width: 130px; height: 130px; }
+    .blob-5 { width: 60px; height: 60px; }
 }
 
-.blob {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    animation: float 6s ease-in-out infinite;
-}
-
-.blob-1 {
-    width: 200px;
-    height: 200px;
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-    animation-duration: 8s;
-}
-
-.blob-2 {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    right: 20%;
-    animation-delay: -2s;
-    animation-duration: 10s;
-}
-
-.blob-3 {
-    width: 100px;
-    height: 100px;
-    bottom: 30%;
-    left: 20%;
-    animation-delay: -4s;
-    animation-duration: 7s;
-}
-
-.blob-4 {
-    width: 120px;
-    height: 120px;
-    top: 10%;
-    right: 10%;
-    animation-delay: -1s;
-    animation-duration: 9s;
-}
-
-.blob-5 {
-    width: 80px;
-    height: 80px;
-    bottom: 20%;
-    right: 30%;
-    animation-delay: -3s;
-    animation-duration: 6s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px) translateX(0px) scale(1);
-        opacity: 0.7;
-    }
-    25% {
-        transform: translateY(-20px) translateX(10px) scale(1.1);
-        opacity: 0.9;
-    }
-    50% {
-        transform: translateY(-40px) translateX(-10px) scale(0.9);
-        opacity: 0.5;
-    }
-    75% {
-        transform: translateY(-20px) translateX(15px) scale(1.05);
-        opacity: 0.8;
-    }
-}
-
-/* Remove old particles styling */
-#particles-js {
-    display: none;
+/* Force remove any particles remnants */
+#particles-js,
+.particles-js-canvas-el {
+    display: none !important;
+    visibility: hidden !important;
 }
