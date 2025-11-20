@@ -989,3 +989,82 @@ body {
         min-width: 100px;
     }
 }
+/* Solid Color Project Cards */
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.solid-color {
+    background: linear-gradient(135deg, var(--card-color-1), var(--card-color-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.color-1 {
+    --card-color-1: #667eea;
+    --card-color-2: #764ba2;
+}
+
+.color-2 {
+    --card-color-1: #f093fb;
+    --card-color-2: #f5576c;
+}
+
+.color-3 {
+    --card-color-1: #4facfe;
+    --card-color-2: #00f2fe;
+}
+
+.color-4 {
+    --card-color-1: #43e97b;
+    --card-color-2: #38f9d7;
+}
+
+.color-5 {
+    --card-color-1: #fa709a;
+    --card-color-2: #fee140;
+}
+
+.color-6 {
+    --card-color-1: #a8edea;
+    --card-color-2: #fed6e3;
+}
+
+.project-icon-solid {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    border-radius: 15px 15px 0 0;
+}
+
+.project-overlay span {
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .solid-color {
+    transform: scale(1.05);
+}
