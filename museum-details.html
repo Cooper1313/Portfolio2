@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Museum Exhibit - Kaiya Cooper</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">Kaiya Cooper</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Back Button -->
+    <section class="back-navigation">
+        <div class="container">
+            <a href="projects.html" class="back-btn" data-aos="fade-right">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+        </div>
+    </section>
+
+    <!-- Project Header -->
+    <section class="project-detail-header">
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <h1>Interactive Museum Exhibit</h1>
+                <p class="project-subtitle">Arduino-based interactive exhibit with sensors, lights, and sound for children</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Arduino</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">Sensors</span>
+                    <span class="tech-tag">UI Design</span>
+                    <span class="tech-tag">Team Leadership</span>
+                    <span class="tech-tag">Fusion360</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="project-gallery">
+        <div class="container">
+            
+            <!-- Images Section -->
+            <div class="gallery-section" data-aos="fade-up">
+                <h2><i class="fas fa-images"></i> Design & Development</h2>
+                <div class="image-grid">
+                    <div class="image-item">
+                        <img src="assets/images/projects/1st%20Museum%20project%20Fusion360%20sketch%20Screenshot%20(117).png" alt="Museum Exhibit Fusion360 Design 1" onclick="openModal(this)">
+                        <div class="image-caption">Initial Fusion360 Design Sketch</div>
+                    </div>
+                    <div class="image-item">
+                        <img src="assets/images/projects/2nd%20Museum%20Project%20Fusion360%20sketchScreenshot%20(118).png" alt="Museum Exhibit Fusion360 Design 2" onclick="openModal(this)">
+                        <div class="image-caption">Refined Fusion360 Design</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Videos Section -->
+            <div class="gallery-section" data-aos="fade-up" data-aos-delay="200">
+                <h2><i class="fas fa-video"></i> Project Demo</h2>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-container">
+                            <a href="assets/videos/Arduino%20Light%20Changing%20Color%20Demo.mp4" target="_blank" class="video-link">
+                                <div class="video-thumbnail">
+                                    <i class="fas fa-play-circle"></i>
+                                    <h4>Arduino Light Demo</h4>
+                                    <p>Watch the interactive light system in action</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documents Section -->
+            <div class="gallery-section" data-aos="fade-up" data-aos-delay="400">
+                <h2><i class="fas fa-file-code"></i> Technical Documentation</h2>
+                <div class="document-grid">
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="document-info">
+                            <h4>Arduino Prototype Code</h4>
+                            <p>Complete source code and documentation for the interactive exhibit</p>
+                            <a href="assets/files/Section3Group4PrototypeArduinocode.pdf" class="btn small" target="_blank">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function openModal(img) {
+            document.getElementById("imageModal").style.display = "block";
+            document.getElementById("modalImage").src = img.src;
+            document.getElementById("caption").innerHTML = img.alt;
+        }
+        
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById("imageModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
