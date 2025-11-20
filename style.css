@@ -1068,3 +1068,108 @@ body {
 .project-card:hover .solid-color {
     transform: scale(1.05);
 }
+/* Additional styles for Cox and Research pages */
+.project-description {
+    padding: 60px 0;
+    background: white;
+}
+
+.description-content h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.project-timeline, .research-highlights {
+    margin-top: 3rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: #3498db;
+    min-width: 150px;
+}
+
+.highlights-grid, .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.highlight-item, .impact-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.highlight-item i, .impact-item i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.findings-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.finding-item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.finding-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3498db;
+    min-width: 60px;
+}
+
+.video-container {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.video-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.video-thumbnail {
+    padding: 3rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.video-thumbnail:hover {
+    background: #f8f9fa;
+}
+
+.video-thumbnail i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.video-thumbnail h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
