@@ -9,17 +9,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-brand">Kaiya Cooper</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
-<body>
     <!-- Lava Lamp Background -->
     <div class="lava-lamp">
         <div class="blob blob-1"></div>
@@ -30,7 +19,17 @@
         <div class="blob blob-6"></div>
     </div>
     
-    <!-- Rest of your existing content... -->
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">Kaiya Cooper</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Contact Section -->
     <section class="contact-page">
         <div class="container">
@@ -65,21 +64,32 @@
                 </div>
                 
                 <div class="contact-form" data-aos="fade-left">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary">Send Message</button>
-                    </form>
+                    <h3>Let's Connect!</h3>
+                    <div class="contact-actions">
+                        <a href="mailto:kaiyacooper@ufl.edu?subject=Portfolio%20Contact&body=Hi%20Kaiya,%0A%0A" class="contact-action">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Send Email</h4>
+                                <p>Click to open your email client</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://linkedin.com/in/kaiyacooper" class="contact-action" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>Connect on LinkedIn</h4>
+                                <p>Let's connect professionally</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/Cooper1313" class="contact-action" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>Follow on GitHub</h4>
+                                <p>Check out my repositories</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
