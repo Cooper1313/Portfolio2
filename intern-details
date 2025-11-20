@@ -50,34 +50,157 @@
         </div>
     </section>
 
-    <!-- Projects Grid -->
+       <!-- Projects Grid -->
     <section class="detailed-projects">
         <div class="container">
             <h2 data-aos="fade-up">Key Projects & Contributions</h2>
             
             <div class="projects-grid">
                 
-                <!-- Faculty Development Programs -->
+                <!-- SEVEC Educator Bootcamp -->
                 <div class="detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="detail-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h3>SEVEC Educator Bootcamp 2025</h3>
+                        <p>Contributed to and presented at the 2025 SEVEC Educator Bootcamp hosted by UF College of Veterinary Medicine. Designed and facilitated an AI prompt engineering icebreaker for veterinary faculty from across the region.</p>
+                        <ul class="detail-features">
+                            <li>Collaborative workshop design with UF AI2 Center</li>
+                            <li>AI prompt engineering training for educators</li>
+                            <li>Interactive icebreaker facilitation</li>
+                            <li>Cross-disciplinary educational innovation</li>
+                        </ul>
+                        <div class="detail-tech">
+                            <span class="tech-tag">AI in Education</span>
+                            <span class="tech-tag">Prompt Engineering</span>
+                            <span class="tech-tag">Workshop Facilitation</span>
+                            <span class="tech-tag">Veterinary Education</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational Technology Tool Review Automation -->
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="detail-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h3>Automated Tool Review System</h3>
+                        <p>Developed an automated system using Google Apps Script and JSON to streamline the evaluation process for new educational technologies. The system uses API integration to gather information from multiple sources and populate review templates.</p>
+                        <ul class="detail-features">
+                            <li>Google Apps Script automation development</li>
+                            <li>API integration for data collection</li>
+                            <li>Template-based review generation</li>
+                            <li>Efficiency optimization for tool evaluation</li>
+                        </ul>
+                        <div class="detail-tech">
+                            <span class="tech-tag">Google Apps Script</span>
+                            <span class="tech-tag">JSON</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Bytes & Resource Development -->
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="detail-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h3>Tech Bytes & AI Resources Website</h3>
+                        <p>Developed and contributed to various Tech Bytes educational content and created a comprehensive AI prompts menu that was transformed into an official UF IT resource website.</p>
+                        <ul class="detail-features">
+                            <li>Educational content development for Tech Bytes</li>
+                            <li>AI prompts menu creation and curation</li>
+                            <li>Website resource development</li>
+                            <li>Cross-platform content adaptation</li>
+                        </ul>
+                        <div class="detail-tech">
+                            <span class="tech-tag">Content Development</span>
+                            <span class="tech-tag">Web Resources</span>
+                            <span class="tech-tag">AI Prompts</span>
+                            <span class="tech-tag">Educational Materials</span>
+                        </div>
+                        <div class="project-links" style="margin-top: 1rem;">
+                            <a href="https://media.citt.ufl.edu/resources/ai/menu/prompts.html" class="btn small" target="_blank">View AI Resources</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphic Design & Event Materials -->
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="detail-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h3>Event Design & Visual Communications</h3>
+                        <p>Created graphic designs, templates, and visual materials for various UF IT CITT events including Teaching TechXploration, the annual recap event for Tech Bytes programming.</p>
+                        <ul class="detail-features">
+                            <li>Event agenda template design</li>
+                            <li>Teaching TechXploration visual materials</li>
+                            <li>Tech Bytes promotional graphics</li>
+                            <li>Brand-consistent design development</li>
+                        </ul>
+                        <div class="detail-tech">
+                            <span class="tech-tag">Graphic Design</span>
+                            <span class="tech-tag">Template Creation</span>
+                            <span class="tech-tag">Event Materials</span>
+                            <span class="tech-tag">Visual Communication</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- T4 Content Management -->
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="detail-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="detail-content">
+                        <h3>T4 Content Management System</h3>
+                        <p>Worked extensively with T4, the University of Florida's enterprise content management system, to develop and maintain web content and digital resources for educational technology initiatives.</p>
+                        <ul class="detail-features">
+                            <li>T4 CMS content development</li>
+                            <li>Web page creation and maintenance</li>
+                            <li>Digital resource management</li>
+                            <li>Content workflow optimization</li>
+                        </ul>
+                        <div class="detail-tech">
+                            <span class="tech-tag">T4 CMS</span>
+                            <span class="tech-tag">Web Development</span>
+                            <span class="tech-tag">Content Management</span>
+                            <span class="tech-tag">Digital Publishing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Development & Training -->
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="600">
                     <div class="detail-icon">
                         <i class="fas fa-chalkboard-teacher"></i>
                     </div>
                     <div class="detail-content">
-                        <h3>Faculty Development Programs</h3>
-                        <p>Design and facilitate professional development workshops for university faculty, focusing on educational technology integration and best practices in digital pedagogy.</p>
+                        <h3>Faculty Development & Innovation</h3>
+                        <p>Contributed to faculty development programs focusing on educational technology adoption, AI integration in teaching, and innovative pedagogical approaches across diverse academic disciplines.</p>
                         <ul class="detail-features">
-                            <li>Workshop curriculum development</li>
-                            <li>Interactive training sessions</li>
-                            <li>Assessment and feedback systems</li>
-                            <li>Faculty engagement strategies</li>
+                            <li>Cross-disciplinary collaboration with faculty</li>
+                            <li>AI integration training for educators</li>
+                            <li>Innovation in educational technology</li>
+                            <li>Professional development program support</li>
                         </ul>
                         <div class="detail-tech">
-                            <span class="tech-tag">Workshop Design</span>
-                            <span class="tech-tag">Curriculum Development</span>
                             <span class="tech-tag">Faculty Training</span>
+                            <span class="tech-tag">Educational Innovation</span>
+                            <span class="tech-tag">Professional Development</span>
+                            <span class="tech-tag">AI Integration</span>
                         </div>
                     </div>
                 </div>
+
+            </div>
+        </div>
+    </section>
 
                 <!-- AI Tools Integration -->
                 <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
@@ -193,32 +316,26 @@
         </div>
     </section>
 
-    <!-- Impact Section -->
+       <!-- Impact Section -->
     <section class="project-impact">
         <div class="container">
             <div class="impact-content" data-aos="fade-up">
                 <h2>Project Impact</h2>
                 <div class="impact-stats">
                     <div class="impact-stat">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Faculty Trained</div>
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Educators Reached</div>
                     </div>
                     <div class="impact-stat">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Tools Evaluated</div>
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Major Projects</div>
                     </div>
                     <div class="impact-stat">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Courses Developed</div>
+                        <div class="stat-number">Multiple</div>
+                        <div class="stat-label">Departments Served</div>
                     </div>
                 </div>
-                <p class="impact-description">Through my work at UF IT CITT, I've contributed to enhancing the educational experience for both faculty and students by implementing cutting-edge technology solutions and providing comprehensive training programs.</p>
+                <p class="impact-description">Through my internship at UF IT CITT, I've contributed to advancing educational technology adoption across the University of Florida, from veterinary medicine to various academic departments, while developing innovative solutions for faculty development and resource management.</p>
             </div>
         </div>
     </section>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
