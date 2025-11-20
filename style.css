@@ -852,3 +852,46 @@ body {
     resize: vertical;
     min-height: 120px;
 }
+/* Contact Actions */
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-action:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-action i {
+    font-size: 2rem;
+    color: #667eea;
+    width: 60px;
+    text-align: center;
+}
+
+.contact-action h4 {
+    margin-bottom: 0.3rem;
+    color: #2c3e50;
+}
+
+.contact-action p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
