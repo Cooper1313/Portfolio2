@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Smooth Flowing Background -->
+    <div class="lava-lamp"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-brand">Kaiya Cooper</div>
@@ -19,11 +22,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-<body>
-    <!-- Smooth Flowing Background -->
-<div class="lava-lamp"></div>
-    
-    <!-- Rest of your existing content... -->
+
     <!-- Back Button -->
     <section class="back-navigation">
         <div class="container">
@@ -54,7 +53,6 @@
     <!-- Project Gallery -->
     <section class="project-gallery">
         <div class="container">
-            
             <!-- Images Section -->
             <div class="gallery-section" data-aos="fade-up">
                 <h2><i class="fas fa-images"></i> Design & Development</h2>
@@ -104,7 +102,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -124,11 +121,9 @@
             document.getElementById("modalImage").src = img.src;
             document.getElementById("caption").innerHTML = img.alt;
         }
-        
         function closeModal() {
             document.getElementById("imageModal").style.display = "none";
         }
-        
         window.onclick = function(event) {
             const modal = document.getElementById("imageModal");
             if (event.target == modal) {
