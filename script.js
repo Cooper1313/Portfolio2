@@ -36,15 +36,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background on scroll
+// Navbar scroll effect - Fixed to maintain dark background
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+    if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
 });
 
@@ -60,7 +58,7 @@ function animateSkillBars() {
             }
         });
     }, { threshold: 0.5 });
-
+    
     skillBars.forEach(bar => {
         observer.observe(bar);
     });
@@ -69,12 +67,68 @@ function animateSkillBars() {
 // Initialize skill bar animations
 document.addEventListener('DOMContentLoaded', animateSkillBars);
 
-// Enhanced lava lamp effect
+// Mind map interaction effects
 document.addEventListener('DOMContentLoaded', function() {
-    const blobs = document.querySelectorAll('.blob');
-    blobs.forEach((blob, index) => {
-        // Add some randomness to the animation
-        blob.style.animationDelay = `-${Math.random() * 5}s`;
-        blob.style.animationDuration = `${6 + Math.random() * 4}s`;
+    const categoryNodes = document.querySelectorAll('.category-node');
+    
+    categoryNodes.forEach(node => {
+        node.addEventListener('mouseenter', function() {
+            // Add pulse effect to connected lines
+            const connections = document.querySelectorAll('.connection');
+            connections.forEach(connection => {
+                connection.style.strokeWidth = '3px';
+                connection.style.opacity = '1';
+            });
+        });
+        
+        node.addEventListener('mouseleave', function() {
+            // Reset connection lines
+            const connections = document.querySelectorAll('.connection');
+            connections.forEach(connection => {
+                connection.style.strokeWidth = '2px';
+                connection.style.opacity = '0.6';
+            });
+        });
     });
+});
+
+// Contact form handling (basic validation)
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const name = contactForm.querySelector('input[type="text"]').value;
+            const email = contactForm.querySelector('input[type="email"]').value;
+            const message = contactForm.querySelector('textarea').value;
+            
+            // Basic validation
+            if (name && email && message) {
+                // Show success message
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Please fill out all required fields.');
+            }
+        });
+    }
+});
+
+// Add loading animation
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
+
+// Parallax effect for sections
+window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    const rate = scrolled * -0.5;
+    
+    const lavaLamp = document.querySelector('.lava-lamp');
+    if (lavaLamp) {
+        lavaLamp.style.transform = `translateY(${rate}px)`;
+    }
 });
