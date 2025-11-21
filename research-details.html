@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Smooth Flowing Background -->
+    <div class="lava-lamp"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-brand">Kaiya Cooper</div>
@@ -19,11 +22,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-<body>
-    <!-- Smooth Flowing Background -->
-<div class="lava-lamp"></div>
-    
-    <!-- Rest of your existing content... -->
+
     <!-- Back Button -->
     <section class="back-navigation">
         <div class="container">
@@ -56,7 +55,6 @@
             <div class="description-content" data-aos="fade-up">
                 <h2>Research Overview</h2>
                 <p>This research paper analyzes the impact of rapid population growth and uneven infrastructure development on public schools in North Florida. Focusing on Duval and St. Johns Counties, it explores how overcrowding, housing pressure, and environmental vulnerability intersect to affect educational access, teacher capacity, and community resilience.</p>
-                
                 <div class="research-highlights">
                     <h3>Key Research Areas</h3>
                     <div class="highlights-grid">
@@ -82,7 +80,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="research-timeline">
                     <h3>Research Timeline</h3>
                     <div class="timeline-item">
@@ -100,7 +97,6 @@
     <!-- Project Gallery -->
     <section class="project-gallery">
         <div class="container">
-            
             <!-- Research Data Section -->
             <div class="gallery-section" data-aos="fade-up">
                 <h2><i class="fas fa-chart-bar"></i> Research Data & Analysis</h2>
@@ -166,7 +162,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -186,11 +181,9 @@
             document.getElementById("modalImage").src = img.src;
             document.getElementById("caption").innerHTML = img.alt;
         }
-        
         function closeModal() {
             document.getElementById("imageModal").style.display = "none";
         }
-        
         window.onclick = function(event) {
             const modal = document.getElementById("imageModal");
             if (event.target == modal) {
