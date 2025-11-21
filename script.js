@@ -92,27 +92,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Contact form handling (basic validation)
+// Contact form handling with mailto
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(contactForm);
-            const name = contactForm.querySelector('input[type="text"]').value;
-            const email = contactForm.querySelector('input[type="email"]').value;
-            const message = contactForm.querySelector('textarea').value;
+            const name = contactForm.querySelector('input[placeholder="Your Name"]').value;
+            const email = contactForm.querySelector('input[placeholder="Your Email"]').value;
+            const subject = contactForm.querySelector('input[placeholder="Subject"]').value;
+            const message = contactForm.querySelector('textarea[placeholder="Your Message"]').value;
             
             // Basic validation
-            if (name && email && message) {
-                // Show success message
-                alert('Thank you for your message! I\'ll get back to you soon.');
-                contactForm.reset();
-            } else {
-                alert('Please fill out all required fields.');
+            if (!name || !email || !message) {
+                alert('Please fill out all required fields (Name, Email, and Message).');
+                return;
             }
+            
+            // Create mailto link
+            const mailtoSubject = subject || 'Portfolio Contact';
+            const mailtoBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+            const mailtoLink = `mailto:kaiyacooper@ufl.edu?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(mailtoBody)}`;
+            
+            // Show feedback to user
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-envelope-open"></i> Opening Email Client...';
+            submitBtn.disabled = true;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Reset form and button after a delay
+            setTimeout(() => {
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                alert('Your email client should now be open with a pre-filled message. Please send the email to complete your message.');
+            }, 2000);
         });
     }
 });
